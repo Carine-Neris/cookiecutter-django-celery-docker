@@ -47,13 +47,16 @@ AWS_BUCKET_NAME=
 AWS_S3_REGION_NAME=
 ```
 
-### 4. Gerar SECRET_KEY com o Django
+### 4. Gerar SECRET_KEY
 
-Execute no terminal para gerar uma nova SECRET_KEY:
+⚠️ **Atenção:** Para executar este comando, você precisa ter o **Python** instalado na sua máquina (não precisa ser o Django).
+
+Para gerar uma nova `SECRET_KEY` segura, execute o comando abaixo no seu terminal:
 
 ```bash
-python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+python -c "import secrets; print(''.join(secrets.choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)))"
 ```
+Copie o valor gerado e cole no campo SECRET_KEY do seu arquivo .env
 
 ### 5. Rodando o Projeto com Docker
 
