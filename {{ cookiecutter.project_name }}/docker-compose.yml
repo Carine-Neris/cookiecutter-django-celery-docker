@@ -1,6 +1,3 @@
-volumes:
-    webserver_media: {}
-    node-modules:
 
 services:
     db:
@@ -38,3 +35,8 @@ services:
         command: celery -A {{cookiecutter.project_slug}} beat -l info
         depends_on:
             - redis
+
+    volumes:
+        pgdata: {}
+        webserver_media: {}
+        node-modules:
