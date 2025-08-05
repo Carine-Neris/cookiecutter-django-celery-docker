@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('agibank.urls'))
+    path('',include('{{cookiecutter.project_slug}}.urls'))
 ]

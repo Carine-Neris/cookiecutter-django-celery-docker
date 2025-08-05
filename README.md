@@ -62,14 +62,14 @@ AWS_S3_REGION_NAME=
 Para gerar uma nova `SECRET_KEY` segura, execute o comando abaixo no seu terminal:
 
 ```bash
-python -c "import secrets; print(''.join(secrets.choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)))"
+python -c 'import secrets; print("".join(secrets.choice("abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)") for i in range(50)))'
 ```
 Copie o valor gerado e cole no campo SECRET_KEY do seu arquivo .env
 
 ### 5. Rodando o Projeto com Docker
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 O Django estará disponível em [http://localhost:8000](http://localhost:8000).
@@ -77,7 +77,7 @@ O Django estará disponível em [http://localhost:8000](http://localhost:8000).
 ### Estrutura do Projeto
 
 ```
-{{cookiecutter.project_slug}}/
+{{cookiecutter.project_name}}/
 ├── docker-compose.yml
 ├── Dockerfile
 ├── .env
@@ -89,6 +89,8 @@ O Django estará disponível em [http://localhost:8000](http://localhost:8000).
     ├── urls.py
     ├── wsgi.py
     ├── celery.py
+── {{cookiecutter.app_name}}/
+   
 ```
 
 ---
