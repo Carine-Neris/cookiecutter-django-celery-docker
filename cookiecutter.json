@@ -1,0 +1,6 @@
+{
+  "project_name": "Informe o nome da Pasta do Projeto",
+  "project_slug": "Nome do Projeto Django (sem espaços, use _ ou -), (EX: carol)",
+  "author": "Seu nome (Ex: John Doe)",
+  "app_name":"O nome do seu app (Ex:cadastro_civel)"
+}
