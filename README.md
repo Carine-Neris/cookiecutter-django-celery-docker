@@ -83,13 +83,24 @@ O Django estará disponível em [http://localhost:8000](http://localhost:8000).
 ├── .env
 ├── requirements.txt
 ├── manage.py
-└── {{cookiecutter.project_slug}}/
-    ├── __init__.py
-    ├── settings.py
-    ├── urls.py
-    ├── wsgi.py
-    ├── celery.py
-── {{cookiecutter.app_name}}/
+├── {{cookiecutter.project_slug}}
+│   ├── asgi.py
+│   ├── celery.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── {{cookiecutter.app_name}}
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tasks.py
+│   ├── tests.py
+│   └── views.py
+
    
 ```
 
