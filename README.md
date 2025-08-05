@@ -19,6 +19,14 @@ cookiecutter https://github.com/seu-usuario/cookiecutter-django-celery-docker.gi
 
 Preencha as informações solicitadas (como o `project_slug`) e o Cookiecutter criará uma cópia do projeto com a estrutura correta.
 
+| Campo          | Descrição                                          | Exemplo    |
+| -------------- | -------------------------------------------------- | ---------- |
+| `project_name` | Nome da pasta principal do projeto                 | MeuProjeto |
+| `project_slug` | Nome do módulo Django (sem espaços, use \_ ou -)   | core\_app  |
+| `author`       | Seu nome completo                                  | John Doe   |
+| `app_name`     | Nome do app principal Django (sem espaços, use \_) | todo\_app  |
+
+
 ### 3. Configure o Arquivo `.env`
 
 Copie o arquivo `.env.template` para `.env`:
