@@ -1,4 +1,8 @@
-
+volumes:
+    pgdata: {}
+    webserver_media: {}
+    node-modules:
+    
 services:
     db:
         container_name: '{{cookiecutter.project_slug}}_database'
@@ -36,7 +40,3 @@ services:
         depends_on:
             - redis
 
-    volumes:
-        pgdata: {}
-        webserver_media: {}
-        node-modules:
