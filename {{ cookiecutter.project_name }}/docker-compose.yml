@@ -1,7 +1,7 @@
 
 services:
     db:
-        container_name: cadastro_database
+        container_name: '{{cookiecutter.project_slug}}_database'
         image: postgres:16-alpine
         environment:
             - POSTGRES_DB=web
