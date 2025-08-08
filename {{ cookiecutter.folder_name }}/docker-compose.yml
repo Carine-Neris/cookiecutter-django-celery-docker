@@ -5,8 +5,8 @@ volumes:
     
 services:
     db:
-        container_name: '{{cookiecutter.project_slug}}_database'
-        image: postgres:16-alpine
+        container_name: '{{cookiecutter.project_name}}_database'
+        image: postgres:{{ cookiecutter.postgresql_version }}-alpine
         environment:
             - POSTGRES_DB=web
             - POSTGRES_USER=postgres
@@ -27,7 +27,7 @@ services:
             - db
     celery:
         build: .
-        command: bash -c "celery -A {{cookiecutter.project_slug}} worker -Q celery --autoscale=5,3 -l info"
+        command: bash -c "celery -A {{cookiecutter.project_name}} worker -Q celery --autoscale=5,3 -l info"
         volumes:
             - webserver_media:/code/media
         depends_on:
@@ -36,7 +36,7 @@ services:
         build: .
         volumes:
             - webserver_media:/code/media
-        command: celery -A {{cookiecutter.project_slug}} beat -l info
+        command: celery -A {{cookiecutter.project_name}} beat -l info
         depends_on:
             - redis
 

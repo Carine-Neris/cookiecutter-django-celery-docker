@@ -17,12 +17,12 @@ pip install cookiecutter
 cookiecutter https://github.com/seu-usuario/cookiecutter-django-celery-docker.git
 ```
 
-Preencha as informações solicitadas (como o `project_slug`) e o Cookiecutter criará uma cópia do projeto com a estrutura correta.
+Preencha as informações solicitadas (como o `project_name`) e o Cookiecutter criará uma cópia do projeto com a estrutura correta.
 
 | Campo          | Descrição                                          | Exemplo    |
 | -------------- | -------------------------------------------------- | ---------- |
-| `project_name` | Nome da pasta principal do projeto                 | MeuProjeto |
-| `project_slug` | Nome do módulo Django (sem espaços, use \_ ou -)   | core\_app  |
+| `folder_name` | Nome da pasta principal do projeto                 | MeuProjeto |
+| `project_name` | Nome do módulo Django (sem espaços, use \_ ou -)   | core\_app  |
 | `author`       | Seu nome completo                                  | John Doe   |
 | `app_name`     | Nome do app principal Django (sem espaços, use \_) | todo\_app  |
 
@@ -77,13 +77,13 @@ O Django estará disponível em [http://localhost:8000](http://localhost:8000).
 ### Estrutura do Projeto
 
 ```
-{{cookiecutter.project_name}}/
+{{cookiecutter.folder_name}}/
 ├── docker-compose.yml
 ├── Dockerfile
 ├── .env
 ├── requirements.txt
 ├── manage.py
-├── {{cookiecutter.project_slug}}
+├── {{cookiecutter.project_name}}
 │   ├── asgi.py
 │   ├── celery.py
 │   ├── __init__.py

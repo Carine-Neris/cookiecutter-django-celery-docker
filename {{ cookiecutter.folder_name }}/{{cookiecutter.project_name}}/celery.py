@@ -7,8 +7,8 @@ from celery.schedules import crontab
 from celery import Celery
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', '{{cookiecutter.project_slug}}.settings')
-app = Celery('{{cookiecutter.project_slug}}')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', '{{cookiecutter.project_name}}.settings')
+app = Celery('{{cookiecutter.project_name}}')
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)

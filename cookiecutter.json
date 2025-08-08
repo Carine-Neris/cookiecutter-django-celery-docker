@@ -1,6 +1,7 @@
 {
-  "project_name": "Cookiecutter Website",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-  "app_name":"Core",
-  "author":  "Anonymous"
+  "folder_name": "Main Folder",
+  "project_name": "{{ cookiecutter.folder_name.lower().replace(' ', '_') }}",
+  "app_name":"core",
+  "author":  "Anonymous",
+  "postgresql_version": ["17", "16", "15", "14", "13"]
 }
