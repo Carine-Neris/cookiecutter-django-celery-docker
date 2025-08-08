@@ -28,9 +28,16 @@ Este projeto é um **template Cookiecutter** para iniciar rapidamente um projeto
 ### 1. Instale o Cookiecutter
 
 ```bash
+pipx install cookiecutter  #Recomendado
+```
+Ou 
+
+```bash
 pip install cookiecutter
 ```
 
+Em caso de duvidas confira o site do [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/README.html
+)
 ### 2. Gere Seu Projeto a Partir do Template
 
 ```bash
